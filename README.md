@@ -1,2 +1,3 @@
 # burger-logger
-burger logger assignemtn
+burger logger assignment
+
