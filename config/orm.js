@@ -29,27 +29,24 @@ var orm = {
     selectAll: (table, cb) => {
         var queryString = `SELECT * FROM ${table};`;
         connection.query(queryString, (err, result) => {
-            if (err) {
-                throw err
-            };
+            if (err) throw err
+
             cb(result);
         })
     },
     insertOne: (table, columns, values, cb) => {
         var queryString = `INSERT INTO ${table}(${columns.toString()}) VALUES (${printQuestionMarks(values.length)});`;
         connection.query(queryString, values, (err, result) => {
-            if (err) {
-                throw err;
-            }
+            if (err) throw err;
+
             cb(result);
         })
     },
     updateOne: (table, objColVals, condition, cb) => {
         var queryString = `UPDATE ${table} SET ${objectToSql(objColVals)} WHERE ${condition};`;
         connection.query(queryString, (err, result) => {
-            if (err) {
-                throw err;
-            };
+            if (err) throw err;
+            
             cb(result);
         })
     }
