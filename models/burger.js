@@ -20,7 +20,7 @@ const burger = {
         orm.selectAll("burgers", function (res) {
             cb(res);
         });
-    }
+    },
 
     //callback function to DELETE entry:
     delete: function (condition, cb) {
