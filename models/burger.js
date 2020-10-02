@@ -21,6 +21,13 @@ const burger = {
             cb(res);
         });
     }
+
+    //callback function to DELETE entry:
+    delete: function (condition, cb) {
+        orm.deleteOne("burgers", condition, function (res) {
+            cb(res);
+        });
+    }
 };
 
 module.exports = burger;
