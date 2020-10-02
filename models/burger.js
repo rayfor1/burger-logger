@@ -1,12 +1,14 @@
 const orm = require("../config/orm");
 
 const burger = {
-    // callback function to CREATE entry 
-    create: function (cols, vals, cb) {
-        orm.insertOne("burgers", cols, vals, function (res) {
+    // callback function to INSERT entry 
+    create: function (columns, values, cb) {
+        orm.insertOne("burgers", columns, values, function (res) {
             cb(res);
         })
     },
+
+    // callback function to UPDATE entry:
     update: function (objColVals, condition, cb) {
         orm.updateOne("burgers", objColVals, condition, function (res) {
             cb(res);
