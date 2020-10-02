@@ -1,7 +1,7 @@
 const orm = require("../config/orm");
 
 const burger = {
-    // callback function to INSERT entry 
+    // callback function to INSERT entry: 
     create: function (columns, values, cb) {
         orm.insertOne("burgers", columns, values, function (res) {
             cb(res);
@@ -14,6 +14,8 @@ const burger = {
             cb(res);
         })
     },
+
+    //callback function to SELECT ALL entries:
     select: function (cb) {
         orm.selectAll("burgers", function (res) {
             cb(res);
