@@ -47,6 +47,17 @@ router.put("/burgers/update/:id", function (req, res) {
     })
 });
 
+router.deleteOne(condition, function(req, res){
+    var condition = `id = ${req.params.id}`;
+    console.log("condition", condition)
+    if(data, changedRows == 0) {
+        return res.status(404).end();
+    } else{
+        res.status(200).end
+    }
+    // Send back response and let page reload from .then in Ajax
+    // res.redirect("/burgers");
+});
 
 
 module.exports = router;
