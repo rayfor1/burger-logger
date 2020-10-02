@@ -1,7 +1,7 @@
 USE burgers_db;
 
 -- List of Burgers: 
-INSERT INTO burgers(burger_name)
+INSERT INTO burgers(burger_name, devoured)
 VALUES
     ("Classic Burger", false),
     ("Bacon Burger", false),
